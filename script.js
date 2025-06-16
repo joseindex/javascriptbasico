@@ -56,3 +56,32 @@ document.getElementById("btnAgregar").addEventListener(
         lista.appendChild(nuevoItem);
     }
 );
+
+
+
+document.getElementById("btnAddword").addEventListener(
+    "click", addPalabraLista
+
+);
+
+function addPalabraLista(){
+    //Obtener el input del html
+    let input = document.getElementById("txtEntrada");
+    //Obtener el valor del input
+    const texto = input.value.trim(); //trim quita los espacios por delante y por detras 
+    //Transformar a mayusculas
+    if (texto === "") {
+        alert("Por favor, ingrese una palabra.");
+        return; 
+    }
+    const textMayuscula = texto.toUpperCase();
+    //Agregar Item a la lista
+    let lista = document.getElementById("listPalabras"); 
+
+    let nuevoItem = document.createElement("li");
+      
+    nuevoItem.textContent = textMayuscula;
+
+    lista.appendChild(nuevoItem);
+    input.value = "";
+}
