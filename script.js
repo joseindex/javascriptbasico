@@ -33,8 +33,26 @@ function arreglos(){
         console.log('No es una pera');
     }
 }
+//Agregar evento a un elemento html 
 document.getElementById("btnSaludar").addEventListener(
     "click", function(){
         console.log("¡Hola!");
+    }
+);
+
+//Modificar el HTML a traves de un DOM 
+document.getElementById("btnAgregar").addEventListener(
+    "click", () => {
+        //
+        let lista = document.getElementById("lista"); 
+
+        let nuevoItem = document.createElement("li");
+
+        let totalItems = lista.childElementCount;
+
+        
+        nuevoItem.textContent = `Item ${totalItems + 1}`;
+
+        lista.appendChild(nuevoItem);
     }
 );
