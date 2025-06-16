@@ -71,7 +71,7 @@ function addPalabraLista(){
     const texto = input.value.trim(); //trim quita los espacios por delante y por detras 
     //Transformar a mayusculas
     if (texto === "") {
-        alert("Por favor, ingrese una palabra.");
+        alert("ingrese una palabra");
         return; 
     }
     const textMayuscula = texto.toUpperCase();
@@ -83,5 +83,7 @@ function addPalabraLista(){
     nuevoItem.textContent = textMayuscula;
 
     lista.appendChild(nuevoItem);
+    //limpiar y establecer el foco
     input.value = "";
+    input.focus();
 }
