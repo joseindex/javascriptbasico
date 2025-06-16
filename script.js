@@ -43,7 +43,7 @@ document.getElementById("btnSaludar").addEventListener(
 //Modificar el HTML a traves de un DOM 
 document.getElementById("btnAgregar").addEventListener(
     "click", () => {
-        //
+        //Obtener el element ul lista de html
         let lista = document.getElementById("lista"); 
 
         let nuevoItem = document.createElement("li");
